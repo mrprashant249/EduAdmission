@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.eduadmission.ui.auth.SplashFragment"
+        android:label=""
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.eduadmission.ui.auth.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.eduadmission.ui.auth.RegisterFragment"
+        android:label="Create Account"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.eduadmission.ui.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_universityListFragment"
+            app:destination="@id/universityListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_courseListFragment"
+            app:destination="@id/courseListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_statusFragment"
+            app:destination="@id/statusFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/universityListFragment"
+        android:name="com.example.eduadmission.ui.university.UniversityListFragment"
+        android:label="@string/university_listing"
+        tools:layout="@layout/fragment_university_list">
+        <action
+            android:id="@+id/action_universityListFragment_to_courseListFragment"
+            app:destination="@id/courseListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/courseListFragment"
+        android:name="com.example.eduadmission.ui.university.CourseListFragment"
+        android:label="@string/course_list"
+        tools:layout="@layout/fragment_course_list">
+        <argument
+            android:name="universityId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_courseListFragment_to_courseDetailFragment"
+            app:destination="@id/courseDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/courseDetailFragment"
+        android:name="com.example.eduadmission.ui.university.CourseDetailFragment"
+        android:label="Course Details"
+        tools:layout="@layout/fragment_course_detail">
+        <argument
+            android:name="courseId"
+            app:argType="string" />
+        <argument
+            android:name="universityId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_courseDetailFragment_to_applicationFormFragment"
+            app:destination="@id/applicationFormFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/applicationFormFragment"
+        android:name="com.example.eduadmission.ui.application.ApplicationFormFragment"
+        android:label="@string/application_form"
+        tools:layout="@layout/fragment_application_form">
+        <argument
+            android:name="courseId"
+            app:argType="string" />
+        <argument
+            android:name="universityId"
+            app:argType="string" />
+        <argument
+            android:name="courseName"
+            app:argType="string"
+            android:defaultValue="Course" />
+        <action
+            android:id="@+id/action_applicationFormFragment_to_statusFragment"
+            app:destination="@id/statusFragment"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/statusFragment"
+        android:name="com.example.eduadmission.ui.application.StatusFragment"
+        android:label="@string/my_applications_header"
+        tools:layout="@layout/fragment_status" />
+
+</navigation>

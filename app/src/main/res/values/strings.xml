@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">EduAdmission</string>
+    <string name="logout">Logout</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="home">Home</string>
+    <string name="university_listing">Universities</string>
+<!--    <string name="double_tap_hint">Long press to change status</string>-->
+    <string name="double_tap_hint">Action for swipe left/right</string>
+    <string name="status_format">Status: %s</string>
+    <string name="uni_id_format">Uni ID: %s</string>
+    <string name="applicant_name_format">Applicant: %s</string>
+    <string name="applicant_email_format">Email: %s</string>
+<!--    <string name="upload_success">%s uploaded successfully</string>-->
+<!--    <string name="upload_error_documents">Please upload documents</string>-->
+<!--    <string name="fill_fields_error">Please complete all fields</string>-->
+<!--    <string name="app_submitted">Application Submitted</string>-->
+<!--    <string name="user_not_logged_in">Error: User not logged in</string>-->
+    
+    <!-- Login/Register -->
+    <string name="welcome_back">Welcome Back</string>
+    <string name="create_account_question">New here? Create Account</string>
+    <string name="create_account">Create Account</string>
+    <string name="full_name">Full Name</string>
+    
+    <!-- Application Form -->
+    <string name="application_form">Application Form</string>
+    <string name="qualification">Qualification</string>
+    <string name="percentage_gpa">Percentage / GPA</string>
+    <string name="documents">Documents</string>
+    <string name="upload_documents">Upload Document(s)</string>
+    <string name="no_file_selected">No file selected</string>
+    <string name="submit_application">Submit Application</string>
+
+    <!-- Course Details -->
+    <string name="course_title_placeholder">Course Title</string>
+    <string name="duration">Duration</string>
+    <string name="fees">Fees</string>
+    <string name="description_placeholder">Description…</string>
+    <string name="apply_now">Apply Now</string>
+    
+    <!-- Home Fragment -->
+    <string name="browse_universities">Browse\nUniversities</string>
+    <string name="my_applications_title">My\nApplications</string>
+    <string name="my_applications_header">My Applications</string>
+    <string name="featured_universities">Featured Universities</string>
+    <string name="welcome_exclamation">Welcome!</string>
+    <string name="course_list">Course List</string>
+    <string name="duration_placeholder">Duration: 4 Years</string>
+    <string name="fees_placeholder">Fees: $50,000/yr</string>
+
+    <string name="submitted">Submitted</string>
+    <string name="under_review">Under Review</string>
+    <string name="accepted">Accepted</string>
+    <string name="rejected">Rejected</string>
+
+    <string name="update_status">Update status</string>
+    <string name="delete_application">Delete</string>
+    <string name="delete_message">Are you sure you want to delete this application?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+</resources>
